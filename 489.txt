@@ -11,8 +11,8 @@ echo "    LSHW: $(lshw -short)"
 echo ""
 echo "    LSDEV: "
 lsblk | sed 's/^/        /'
-lspci | sed 's/^/        /'        lspci
-lsusb | sed 's/^/        /'        lsusb
+lspci | sed 's/^/        /'        
+lsusb | sed 's/^/        /'        
 echo ""
 echo "Netwowrk Info:"
 echo "    IP Address: $(hostname -I)"
