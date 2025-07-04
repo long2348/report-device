@@ -1,0 +1,19 @@
+DATE REPORT: 20:49 04/07/2025
+                                                                    Thong tin he thong cua thiet bi: my PC - Tam Tran 
+CPU Specs: 
+
+    LSCPU: lscpu
+
+Hardware Spec:
+
+    LSHW: lshw -short
+
+    LSDEV: 
+        lsblk
+        lspci
+        lsusb
+
+Netwowrk Info:
+    IP Address: hostname -I
+
+    MAC ADDRESS: ip link show | grep ether
