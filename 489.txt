@@ -1,19 +1,20 @@
-DATE REPORT: 20:49 04/07/2025
-                                                                    Thong tin he thong cua thiet bi: my PC - Tam Tran 
-CPU Specs: 
-
-    LSCPU: lscpu
-
-Hardware Spec:
-
-    LSHW: lshw -short
-
-    LSDEV: 
-        lsblk
-        lspci
-        lsusb
-
-Netwowrk Info:
-    IP Address: hostname -I
-
-    MAC ADDRESS: ip link show | grep ether
+echo "DATE REPORT: $(date +'%H:%M %d/%m/%Y')"
+echo                                                                    "Thong tin he thong cua thiet bi: $(whoami)"
+echo "" 
+echo "CPU Specs: "
+echo ""
+echo "    LSCPU: $(lscpu)" 
+echo ""
+echo "Hardware Spec:"
+echo ""
+echo "    LSHW: $(lshw -short)"
+echo ""
+echo "    LSDEV: "
+lsblk | sed 's/^/        /'
+lspci | sed 's/^/        /'        lspci
+lsusb | sed 's/^/        /'        lsusb
+echo ""
+echo "Netwowrk Info:"
+echo "    IP Address: $(hostname -I)"
+echo ""
+echo "    MAC ADDRESS: $(ip link show | grep ether | awk '{print $2}')"
